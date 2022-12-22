@@ -56,12 +56,31 @@
 > SELECT * FROM my_client;   
 # 화면 구성
 ### 메인
-![메인](https://github.com/LJMroqortk/Spring_blog_202199055_2-3/tree/main/readmeimg/index-main.png)
+![메인](./readmeimg/index-main.PNG)
 ### 회원가입
+![회원가입](./readmeimg/signup.PNG)
+![회원가입](./readmeimg/signup-befor.PNG)
+![회원가입](./readmeimg/signup-after.PNG)
 ### 로그인 / 로그아웃
+![로그인/로그아웃](./readmeimg/login.PNG)
+![로그인/로그아웃](./readmeimg/login-befor.PNG)
+![로그인/로그아웃](./readmeimg/login-after.PNG)
 ### 프로필 조회 수정 삭제
+![프로필조회수정삭제](./readmeimg/user-profile.PNG)
+![프로필조회수정삭제](./readmeimg/user-profile-modify-befor.PNG)
+![프로필조회수정삭제](./readmeimg/user-delete-befor.PNG)
+![프로필조회수정삭제](./readmeimg/user-delete-after.PNG)
 ### 자신 게시글 여부 및 수정 삭제
-### 게시판 생생
+![게시글여부수정삭제](./readmeimg/oneview.PNG)
+![게시글여부수정삭제](./readmeimg/oneview-user.PNG)
+![게시글여부수정삭제](./readmeimg/oneview-modify.PNG)
+![게시글여부수정삭제](./readmeimg/oneview-modify-after.PNG)
+![게시글여부수정삭제](./readmeimg/oneview-delete.PNG)
+### 게시판 생성
+![게시글생성](./readmeimg/register.PNG)
+![게시글생성](./readmeimg/register-insert.PNG)
+### 모달 확인
+![모달확인](./readmeimg/modal.PNG)
 # 맺음말
 ### 프로젝트을 하면서...
 > 프로젝트는 항상 아이디어의 연속이지만, 그걸 실현 시키는 힘이 제일 중요한 것 같습니다.   
