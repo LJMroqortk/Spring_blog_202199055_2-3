@@ -56,7 +56,7 @@
 > SELECT * FROM my_client;   
 # 화면 구성
 ### 메인
-![메인](./index-main.png)
+![메인](index-main.png)
 ### 회원가입
 ### 로그인 / 로그아웃
 ### 프로필 조회 수정 삭제
