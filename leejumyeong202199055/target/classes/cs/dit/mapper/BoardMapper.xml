@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- BoardMapper을 통해 Service에 주입할 쿼리문 -->
+<mapper namespace="cs.dit.mapper.BoardMapper">
+	<!-- DB의 데이터를 조건에 맞게 가져오는 쿼리 -->
+	<select id="getList" resultType="cs.dit.dto.BoardVO">
+		select * from my_board order by bno desc limit #{pageStart}, #{amount}
+	</select>
+	<select id="newgetList" resultType="cs.dit.dto.BoardVO">
+		select * from my_board order by bno desc limit #{pageNum}, #{amount}
+	</select>
+	<select id="popgetList" resultType="cs.dit.dto.BoardVO">
+		select * from my_board order by count desc limit #{pageNum}, #{amount}
+	</select>
+	<!-- DB의 데이터를 조건에 맞게 가져오는 쿼리 -->
+	<!-- DB의 게시글의 총 개수을 확인하는 쿼리 -->
+	<select id="getTotal" resultType="int">
+		select count(*) from my_board
+	</select>
+	<!-- DB의 게시글의 총 개수을 확인하는 쿼리 -->
+	<!-- DB의 권한을 얻어 데이터를 삽입, 정밀 조회, 삭제, 업데이트하는 쿼리 -->
+	<insert id="insert">
+		insert into my_board(title , content, writer)values(#{title}, #{content}, #{writer})
+	</insert>
+	<select id="selectOne" resultType="cs.dit.dto.BoardVO">
+		select * from my_board where bno = #{bno}
+	</select>
+	<delete id="delete">
+		delete from my_board where bno = #{bno}
+	</delete>
+	<update id="update">
+		update my_board set title = #{title}, content = #{content}, writer = #{writer}, updatedate = now() where bno = #{bno}
+	</update>
+	<!-- DB의 권한을 얻어 데이터를 삽입, 정밀 조회, 삭제, 업데이트하는 쿼리 -->
+	<!-- 게시글을 정밀 조회할때마다 조회수가 증가하는 쿼리 -->
+	<update id="viewcount">
+		update my_board set count = count + 1 WHERE bno = #{bno}
+	</update>
+	<!-- 게시글을 정밀 조회할때마다 조회수가 증가하는 쿼리 -->
+</mapper>
